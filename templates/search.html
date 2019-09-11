@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block container %}
+    <form action="/" method="get" style="margin-bottom:30px;">
+        <input type="text" name="s" placeholder="可按序号,姓名,性别及住址搜索">
+        <input type="submit">
+    </form>
+    <div>
+        <table border="1px" rules="all" width="100%">
+            <tr>
+                {% for i in menu %}
+                    <td><strong>{{ i }}</strong></td>
+                {% end %}
+            </tr>
+            {% for i in user %}
+            <tr>
+                {% for j in i %}
+                <td style="width:100px">{{ j }}</td>
+                {% end %}
+            </tr>
+            {% end %}
+        </table>
+    </div>
+    <hr style="margin-top:50px"/>
+
+    <span>修改数据入口：<a href="/post">...</a></span>
+{% end %}

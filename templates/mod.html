@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block container %}
+    <form action="/post" method="post">
+            序号:<input type="text" name="id">
+            <br>
+            姓名:<input type="text" name="name">
+            <br>
+            性别:<input type="radio" name="sex" value="男">男
+            <input type="radio" name="sex" value="女">女
+            <br>
+            城市:<input type="text" name="city">
+            <br>
+            概述:<input type="text" name="description">
+            <br>
+            生日:<input type="text" name="birthday">
+            <br>
+            独生:<input type="radio" name="only_child" value=1>是
+            <input type="radio" name="only_child" value=0>否
+            <br>
+            <input type="submit" value="提交">
+    </form>
+{% end %}
